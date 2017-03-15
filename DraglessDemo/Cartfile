@@ -1,0 +1,5 @@
+# Carthage Documentation
+# https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#origin
+
+github "SnapKit/SnapKit" ~> 3.0.2
+github "ReactiveX/RxSwift" ~> 3.1
