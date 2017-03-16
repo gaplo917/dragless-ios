@@ -9,10 +9,25 @@
 
 * Storyboard `prepareForSegue` `loadNib` breaks OOP.  Views or ViewController always has NO self-documented schema (Constructor) to follow.
 
-*  Interface builder settings cannot be replicated
+* Interface builder settings is not portable and cannot be replicated.
+
+* Interface builder settings is hard to find (compared to autocomplete in Swift), thus, super high learning curve.
+
+* Drag the auto-layout constaint is error-prone.
 
 
-> Work Around ? (Automated UI Test/ 100% Test Coverage) OR Solve the Problem fundamentally?
+## Interesting Facts in iOS Development
+* We are developer not designer
+
+* "Drag and drop" efficency is directly proportional to developer screen size
+
+* Xcode is very slow on rendering storyboard
+
+* Dynamic changing UI through User action is very common
+
+* Mixing Static(via IB) & Dynamic(via Code) makes project inconsistent and not predictable
+
+* Impossible to preview Dynamic UI
 
 
 (DEMO) Let audience guess the result, safe to run / compile fail / crash app?
@@ -24,22 +39,18 @@
 * Copy & past IB Button (contains IBAction) to another view
 
 
+> Work Around to spot the human error (Automated UI Test/ 100% Test Coverage)? 
+
+> OR Solve the Problem fundamentally?
+
+
 ## What can you experience if a project is easy to maintain?
 * Consistent
 * Predictable
-* Code are easy to delete
+* Codes are easy to add/ modify/ delete/ merge
 * Easy to refactor
-
-## Facts in Traditional iOS Development
-* We are developer not designer
-
-* Xcode is too slow to render storyboard
-
-* Dynamic changing UI through User action is very common
-
-* Mixing Static(via IB) & Dynamic(via Code) makes project inconsistent and not predictable
-
-* Impossible to preview Dynamic UI
+* Most of the human error can be captured by compiler
+* 一個完全唔關事（識寫 Code 但唔識寫 iOS) 嘅人都可以輕鬆走入黎幫手
 
 
 
