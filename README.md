@@ -56,13 +56,13 @@
 
 * We think that "Save & Preview" is very important when developing a UI. Thus, We use Xcode + `@IBDesignable` (found `Preview.xib`). Also, all dynamic layout can also be previewed by changing the `XXXView` state in `prepareForInterfaceBuilder`
 
-* We build extensions for `prepareForInterfaceBuilder` (IBHelper). i.e. drawing the boundaries of each view, recursively render all children view, 10 items for tableView
+* We build extensions for `prepareForInterfaceBuilder` (IBHelper). i.e. drawing the boundaries of each view, recursively render all children view, 10 empty items for tableView to trigger `tableViewCell.prepareForInterfacebuilder`.
 
 * We use `TypedViewControllerType` to bound developers strictly. By the protocol definition,  `XXXViewController` must own `XXXView`. Accessing `typedView` without any worries. No `@IBOutlet` is needed anymore when you use
 
-* We use `XXXViewControllerLaunching` protocol to provide a schema for launching the corresponding ViewController. All ViewController should own their own `launcher`. (see in MainViewController)
+* We use `XXXViewControllerLaunching` protocol to provide a schema for launching the corresponding ViewController. All ViewController should own their own `launcher` when it needs to launch other ViewController. (see in MainViewController)
 
-* As the project has no @IBOutlet/@IBAction, 100% Compile time safe. We heavily use Intellij Refactor features in Swift (Mostly for variable/function rename)
+* As the project has no `@IBOutlet`/`@IBAction`, 100% Compile time safe. We heavily use Intellij Refactor features in Swift (Mostly for variable/function rename)
 
 * We heavily use Intellij AppCode Live Template features to utilize this pattern as fast as possible.
 ![alt text](https://cdn.rawgit.com/gaplo917/dragless-ios/7ddd3b09/DraglessDemo/dragless_appcode_live_template.gif)
